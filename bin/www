@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+const app = require('../app'); //Require our app
+
+app.set('port', process.env.PORT || 8090);
+
+const server = app.listen(app.get('port'), function() {
+  console.log('Express server listening on port ' + server.address().port);
+});
